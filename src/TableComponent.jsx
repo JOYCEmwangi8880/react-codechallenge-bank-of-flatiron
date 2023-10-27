@@ -1,10 +1,11 @@
 import React from 'react'
 
+
 function TableComponent({transactions}) {
   return (
     <div>
         <table>
-            <thead>
+            <thead className='th'>
                 <th>transaction no</th>
                 <th>Date</th>
                 <th>Description</th>
@@ -14,20 +15,23 @@ function TableComponent({transactions}) {
            <tbody>
            {transactions.map((transaction)=>(
             <tr key={transaction.id}>
+
             
                 <td>{transaction.id}</td>
-                     <td>{transaction.date}</td>
+                 <td>{transaction.date}</td>
                   <td> {transaction.description}</td>
                  <td>{transaction.category}</td>
                  <td>{transaction.amount} </td>
+
             </tr>
-           ) )}
 
-           
+             ) )}
 
-           
-           </tbody>
+          </tbody>
         </table>
+
+
+
 
 
     </div>
