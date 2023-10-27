@@ -5,38 +5,28 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+h1{
+  color: blue;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  font-weight: bolder;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.th{
+  color: tomato;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-decoration-line: underline;
+  
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.btn{
+  color: blue;
+  font-size: large;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.btnn{
+  color: red;
+  font-weight: bolder;
+  text-transform: uppercase;
+ ;
 }
