@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import TableComponent from './TableComponent'
+import AddTransaction from './assets/AddTransaction'
 
 function App() {
   const [transactions, setTransactions]= useState([])
@@ -17,7 +18,10 @@ function App() {
 
   return (
     <>
+    <h1>BANK OF FLATIRON</h1>
 <TableComponent transactions={transactions} />
+<AddTransaction/>
+
 
 
 
