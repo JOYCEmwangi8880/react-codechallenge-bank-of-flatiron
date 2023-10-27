@@ -1,41 +1,42 @@
-import React from 'react'
+import React from 'react';
 
-
-function TableComponent({transactions}) {
+function TableComponent({ transactions, onDeleteTransaction }) {
   return (
     <div>
-        <table>
-            <thead className='th'>
-                <th>transaction no</th>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Amount</th>
-            </thead>
-           <tbody>
-           {transactions.map((transaction)=>(
+      <table className='table'>
+        <thead className='th'>
+          <tr>
+            <th>Transaction no</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {transactions.map((transaction) => (
             <tr key={transaction.id}>
-
-            
-                <td>{transaction.id}</td>
-                 <td>{transaction.date}</td>
-                  <td> {transaction.description}</td>
-                 <td>{transaction.category}</td>
-                 <td>{transaction.amount} </td>
-
+              <td>{transaction.id}</td>
+              <td>{transaction.date}</td>
+              <td>{transaction.description}</td>
+              <td>{transaction.category}</td>
+              <td>{transaction.amount}</td>
+              <td>
+                <button
+                  className="button-delete" 
+                  onClick={() => onDeleteTransaction(transaction.id)}
+ >
+                  Delete
+                </button>
+              </td>
             </tr>
-
-             ) )}
-
-          </tbody>
-        </table>
-
-
-
-
-
+          ))}
+        </tbody>
+      </table>
     </div>
-  )
+  );
 }
 
-export default TableComponent
+export default TableComponent;
+
