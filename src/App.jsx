@@ -1,7 +1,7 @@
-import  { useState, useEffect } from 'react';
-import './App.css';
-import TableComponent from './TableComponent';
-import AddTransaction from './assets/AddTransaction';
+import  { useState, useEffect } from "react";
+import "./App.css";
+import TableComponent from "./TableComponent";
+import AddTransaction from "./assets/AddTransaction";
 
 function App() {
   const [transactions, setTransactions] = useState([]);
@@ -27,6 +27,10 @@ function App() {
         if (response.status === 201) {
           // If the request was successful, update the client state.
           setTransactions([...transactions, newTransaction]);
+
+          // Prevent double transactions after refreshing
+          const newTransactionId = response.headers.get("Location");
+          window.history.replaceState(null, null, `/transactions/${newTransactionId}`);
         } else {
           console.error("Error posting transaction");
         }
