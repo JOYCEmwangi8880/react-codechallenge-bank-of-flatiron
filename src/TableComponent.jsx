@@ -1,4 +1,5 @@
-import React from 'react';
+
+import PropTypes from 'prop-types'; // Import PropTypes
 
 function TableComponent({ transactions, onDeleteTransaction }) {
   return (
@@ -24,9 +25,9 @@ function TableComponent({ transactions, onDeleteTransaction }) {
               <td>{transaction.amount}</td>
               <td>
                 <button
-                  className="button-delete" 
+                  className="button-delete"
                   onClick={() => onDeleteTransaction(transaction.id)}
- >
+                >
                   Delete
                 </button>
               </td>
@@ -38,5 +39,9 @@ function TableComponent({ transactions, onDeleteTransaction }) {
   );
 }
 
-export default TableComponent;
+TableComponent.propTypes = {
+  transactions: PropTypes.array.isRequired, 
+  onDeleteTransaction: PropTypes.func.isRequired,
+};
 
+export default TableComponent;
