@@ -7,7 +7,7 @@ function AddTransaction({ onAddTransaction }) {
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
 
-  const [nextId, setNextId] = useState(16); // Initialize with the desired "id" value
+
 
   function handleDateChange(e) {
     setDate(e.target.value);
@@ -52,14 +52,7 @@ function AddTransaction({ onAddTransaction }) {
           // Add the new transaction to the transactions table
           onAddTransaction(newTransaction);
 
-          // Clear the form inputs
-          setDate("");
-          setDescription("");
-          setCategory("");
-          setAmount("");
-        } else {
-          // Handle the error
-          console.error("Error posting transaction");
+         
         }
       });
   }
