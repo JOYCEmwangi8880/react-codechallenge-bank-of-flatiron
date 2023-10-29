@@ -15,7 +15,7 @@ This is a simple React application that allows users to view, add, and delete tr
 
 1. npm install
 2. npm start
-3. This will start the development server on port 3000. You can then open your browser and navigate to http://localhost:5176/ to view the application.
+3. This will start the development server on port 3000. You can then open your browser and navigate to http://localhost:5174/to view the application.
 
 ## Usage
 
