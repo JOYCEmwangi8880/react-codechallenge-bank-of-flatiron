@@ -1,5 +1,5 @@
 
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from 'prop-types'; 
 
 function TableComponent({ transactions, onDeleteTransaction }) {
   return (
