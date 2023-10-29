@@ -1,7 +1,8 @@
 import  { useState, useEffect } from "react";
 import "./App.css";
-import TableComponent from "./assets/components/TableComponent";
-import AddTransaction from "./assets/components/AddTransaction";
+import TableComponent from "./components/TableComponent";
+import AddTransaction from "./components/AddTransaction";
+
 
 function App() {
   const [transactions, setTransactions] = useState([]);
